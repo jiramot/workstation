@@ -151,7 +151,8 @@ class Archive(object):
 
             #TODO: use environment variable to override cachedir
             cache_dir = path.expanduser(get_env("battleschool_cache_dir", "~/Library/Caches/battleschool"))
-            download_dir = path.join(cache_dir, "downloads")
+            # download_dir = path.join(cache_dir, "downloads")
+            download_dir = get_env("home", "~/Downloads")
             if not path.exists(download_dir):
                 os.makedirs(download_dir)
                 #TODO: only chown downloaded item, only chown if just downloaded
