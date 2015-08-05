@@ -4,6 +4,7 @@
   pre_tasks:
     - group_by: key={{ ansible_system }}
   roles:
+    - role: android
     - role: common
     - role: docker
     - role: java
