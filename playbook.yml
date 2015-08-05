@@ -7,7 +7,6 @@
     - role: common
     - role: docker
     - role: java
-    - role: intellij
     - role: nodejs
   
   post_tasks:

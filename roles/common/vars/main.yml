@@ -6,6 +6,7 @@ mac_apps:
   - sourcetree
   - sublime-text
   - smcfancontrol
+  - intellij-idea
 
 brew_packages:
   - autojump
