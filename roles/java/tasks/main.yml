@@ -1,0 +1,7 @@
+---
+- name: Install java 8
+  mac_pkg: pkg_name=com.oracle.jdk8u51 pkg_version=1.1
+           url=http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51-macosx-x64.dmg
+           curl_opts="-L --cookie oraclelicense=accept-securebackup-cookie"
+           archive_type=dmg archive_path='JDK 8 Update 51.pkg'
+  sudo: yes           

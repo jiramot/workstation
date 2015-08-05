@@ -1,0 +1,48 @@
+---
+mac_apps:
+  - iterm2
+  - vagrant
+  - virtualbox
+  - sourcetree
+  - sublime-text
+
+brew_packages:
+  - autojump
+  - awscli
+  - brew-cask
+  - curl
+  - doxygen
+  - git
+  - git-extras
+  - graphviz
+  - htop
+  - jq
+  - rbenv
+  - rbenv-gem-rehash
+  - rcm
+  - redis
+  - rename
+  - rsync
+  - ruby-build
+  - sloccount
+  - tig
+  - tree
+  - wget
+  - xctool
+  - zsh
+
+npm_packages:
+  - appium
+
+gem_packages:
+  - bundler
+  - cocoapods
+  - fpm
+  - json
+  - rake
+
+pip_packages:
+  - battleschool
+
+link_files:
+  - { path: '/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl', dest: "/usr/bin/subl" }

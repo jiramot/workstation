@@ -1,0 +1,10 @@
+---
+- name: Install sublime 2
+  mac_pkg: pkg_type=app
+           url=http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.dmg
+           archive_type=dmg archive_path='Sublime Text 2.app'
+
+- name: Create link file
+  file: src={{ item.path }} dest={{ item.dest }} state=link
+  with_items:
+    - { path: '/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl', dest: "/usr/bin/subl" }

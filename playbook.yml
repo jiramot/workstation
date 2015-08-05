@@ -1,0 +1,14 @@
+---
+- hosts: all
+  gather_facts: true
+  pre_tasks:
+    - group_by: key={{ ansible_system }}
+  roles:
+    - role: common
+    - role: docker
+    - role: java
+    - role: intellij
+    - role: nodejs
+  
+  post_tasks:
+    - debug: msg="Setup finished on {{ ansible_hostname }} running for {{ username }}. Have a good time!"

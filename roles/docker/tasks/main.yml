@@ -1,0 +1,6 @@
+---
+- name: Install docker packages
+  homebrew: pkg={{ item }} state=present
+  with_items: 
+    - boot2docker
+    - docker

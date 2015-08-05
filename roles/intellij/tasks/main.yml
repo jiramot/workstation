@@ -1,0 +1,6 @@
+---
+- name: Install ideaIU-14
+  mac_pkg: pkg_type=app
+           url=https://d1opms6zj7jotq.cloudfront.net/idea/ideaIU-14.1.4.dmg
+           archive_type=dmg archive_path='IntelliJ IDEA 14.app'
+  sudo: yes           
