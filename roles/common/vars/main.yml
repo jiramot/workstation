@@ -5,6 +5,7 @@ mac_apps:
   - virtualbox
   - sourcetree
   - sublime-text
+  - smcfancontrol
 
 brew_packages:
   - autojump
@@ -47,3 +48,4 @@ pip_packages:
 
 link_files:
   - { path: '/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl', dest: "/usr/bin/subl" }
+  - { path: '/usr/local/lib/node_modules/appium/bin/appium.js', dest: '/usr/bin/appium'}
