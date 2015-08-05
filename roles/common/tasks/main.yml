@@ -85,10 +85,8 @@
 
 - name: Install gems
   gem: name={{ item }} state=present
+       executable=/Users/{{ username }}/.rbenv/versions/2.2.2/bin/gem
   with_items: gem_packages
-
-- name: Setup Pod
-  command: pod setup
 
 - name: Install python package manager 'pip'
   sudo: yes
@@ -102,4 +100,7 @@
 - name: Create link file
   file: src={{ item.path }} dest={{ item.dest }} state=link
   with_items: link_files
-
+  sudo: yes
+  
+- name: Setup Pod
+  command: pod setup
