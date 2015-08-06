@@ -7,6 +7,7 @@ mac_apps:
   - sublime-text
   - smcfancontrol
   - intellij-idea
+  - google-chrome
 
 brew_packages:
   - autojump
