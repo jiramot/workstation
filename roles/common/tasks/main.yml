@@ -84,9 +84,9 @@
   command: rbenv global 2.2.2
 
 - name: Install gems
-  gem: name={{ item }} state=present
-       executable=/Users/{{ username }}/.rbenv/versions/2.2.2/bin/gem
+  gem: name={{ item }} 
   with_items: gem_packages
+  sudo: yes
 
 - name: Install python package manager 'pip'
   sudo: yes
