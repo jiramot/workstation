@@ -101,6 +101,15 @@
   file: src={{ item.path }} dest={{ item.dest }} state=link
   with_items: link_files
   sudo: yes
-  
+
+- name: Ensure presence of launchd.conf
+  file: state=touch path=/etc/launchd.conf
+  sudo: yes
+
+- name: Add environment variable
+  lineinfile: dest=/etc/launchd.conf regexp="^{{ item }}" line="{{ item }}"  
+  with_items: environment_variables
+  sudo: yes
+
 - name: Setup Pod
   command: pod setup
