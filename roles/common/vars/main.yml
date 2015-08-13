@@ -1,13 +1,16 @@
 ---
 mac_apps:
+  - flux
+  - gas-mask
+  - genymotion
+  - google-chrome
+  - intellij-idea
   - iterm2
-  - vagrant
-  - virtualbox
+  - smcfancontrol
   - sourcetree
   - sublime-text
-  - smcfancontrol
-  - intellij-idea
-  - google-chrome
+  - vagrant
+  - virtualbox
 
 brew_packages:
   - autojump
