@@ -10,7 +10,7 @@ mac_apps:
   - sourcetree
   - sublime-text
   - vagrant
-  - virtualbox
+  - virtualbox4330101610
 
 brew_packages:
   - autojump

@@ -1,0 +1,16 @@
+---
+#
+# Ruby
+#
+- name: Install ruby versions
+  command: rbenv install {{ item }} --skip-existing creates={{ lookup('env','HOME') }}/.rbenv/versions/{{ item }}
+  with_items:
+    - 2.2.2
+
+- name: Set global ruby versions
+  command: rbenv global 2.2.2
+
+- name: Install gems
+  gem: name={{ item }} 
+  with_items: gem_packages
+  sudo: yes
