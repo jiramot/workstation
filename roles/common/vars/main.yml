@@ -6,11 +6,12 @@ mac_apps:
   - google-chrome
   - intellij-idea
   - iterm2
+  - mysqlworkbench
   - smcfancontrol
   - sourcetree
   - sublime-text
   - vagrant
-  - virtualbox4330101610
+  - virtualbox
 
 brew_packages:
   - autojump

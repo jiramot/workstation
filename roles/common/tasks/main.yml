@@ -1,15 +1,15 @@
 ---
-- name: Ensure presence of bash_profile
-  file: state=touch path={{home_dir}}/.bash_profile
+# - name: Ensure presence of bash_profile
+#   file: state=touch path={{home_dir}}/.bash_profile
 
-- name: Load bashrc in bash_profile
-  lineinfile: dest={{ home_dir }}/.bash_profile regexp="\. \$HOME\/\.bashrc" line="[[ -r $HOME/.bashrc ]] && . $HOME/.bashrc"
+# - name: Load bashrc in bash_profile
+#   lineinfile: dest={{ home_dir }}/.bash_profile regexp="\. \$HOME\/\.bashrc" line="[[ -r $HOME/.bashrc ]] && . $HOME/.bashrc"
 
-- name: Ensure presence of bashrc
-  file: state=touch path={{ home_dir }}/.bashrc
+# - name: Ensure presence of bashrc
+#   file: state=touch path={{ home_dir }}/.zshrc
 
-- name: Add ll alias
-  lineinfile: dest={{ home_dir }}/.bashrc regexp="^alias ll" line="alias ll='ls -lah'"
+# - name: Add ll alias
+  lineinfile: dest={{ home_dir }}/.zshrc regexp="^alias ll" line="alias ll='ls -lah'"
 
 - name: Check Homebrew is installed
   stat: path=/usr/local/bin/brew
