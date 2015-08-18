@@ -30,6 +30,7 @@ brew_packages:
   - rcm
   - redis
   - rename
+  - rpm
   - rsync
   - ruby-build
   - sloccount
