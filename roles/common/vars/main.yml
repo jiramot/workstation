@@ -59,4 +59,4 @@ link_files:
 
 environment_variables:
   - export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home
-  - export GRADLE_HOME=/usr/local/Cellar/gradle/2.5/libexec
+  - export GRADLE_HOME=/usr/local/Cellar/gradle/2.6/libexec
