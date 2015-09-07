@@ -18,9 +18,10 @@ brew_packages:
   - awscli
   - brew-cask
   - curl
-  - doxygen
+  - doxygeg
   - git
   - git-extras
+  - goland
   - gradle
   - graphviz
   - htop
@@ -60,3 +61,4 @@ link_files:
 environment_variables:
   - export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home
   - export GRADLE_HOME=/usr/local/Cellar/gradle/2.6/libexec
+  - export GOROOT=/usr/local/Cellar/go/1.5/libexec
