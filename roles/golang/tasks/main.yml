@@ -1,0 +1,17 @@
+- name: Install packages
+  homebrew: pkg=go state=present
+
+- name: Ensure $HOME/go
+  file: path={{home_dir}}/go state=directory
+
+- name: Set GOPATH
+  lineinfile: dest={{ home_dir  }}/.zshrc regexp="^GOPATH" line="GOPATH=$HOME/go"
+
+- name: Set GOROOT
+  lineinfile: dest={{ home_dir  }}/.zshrc regexp="^PATH=$PATH:$GOPATH/bin" line="PATH=$PATH:$GOPATH/bin"
+
+- name: Set PATH
+  lineinfile: dest={{ home_dir  }}/.zshrc regexp="^PATH=$PATH:$GOROOT/bin" line="PATH=$PATH:$GOROOT/bin"
+
+- name: Update path
+  command: source {{ home_dir  }}/.zshrc

@@ -3,10 +3,12 @@
   gather_facts: true
   pre_tasks:
     - group_by: key={{ ansible_system }}
+    
   roles:
     - role: android
     - role: common
     - role: docker
+    - role: golang
     - role: java
     - role: nodejs
   
