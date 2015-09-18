@@ -5,13 +5,17 @@
   file: path={{home_dir}}/go state=directory
 
 - name: Set GOPATH
-  lineinfile: dest={{ home_dir  }}/.zshrc regexp="^GOPATH" line="GOPATH=$HOME/go"
+  lineinfile: dest={{ home_dir  }}/.zshrc regexp="^export GOPATH" line="export GOPATH=$HOME/go"
 
 - name: Set GOROOT
-  lineinfile: dest={{ home_dir  }}/.zshrc regexp="^PATH=$PATH:$GOPATH/bin" line="PATH=$PATH:$GOPATH/bin"
+  lineinfile: dest={{ home_dir  }}/.zshrc regexp="^export GOROOT" line="export GOROOT=/usr/local/Cellar/go/1.5/libexec"
 
-- name: Set PATH
-  lineinfile: dest={{ home_dir  }}/.zshrc regexp="^PATH=$PATH:$GOROOT/bin" line="PATH=$PATH:$GOROOT/bin"
+
+- name: Set PATH GOPATH
+  lineinfile: dest={{ home_dir  }}/.zshrc regexp="^export PATH=$PATH:$GOPATH/bin" line="export PATH=$PATH:$GOPATH/bin"
+
+- name: Set PATH GOROOT
+  lineinfile: dest={{ home_dir  }}/.zshrc regexp="^export PATH=$PATH:$GOROOT/bin" line="export PATH=$PATH:$GOROOT/bin"
 
 - name: Update path
-  command: source {{ home_dir  }}/.zshrc
+  shell: source {{ home_dir  }}/.zshrc
