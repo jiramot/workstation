@@ -53,6 +53,7 @@ gem_packages:
 
 pip_packages:
   - battleschool
+  - awsebcli
 
 link_files:
   - { path: '/opt/homebrew-cask/Caskroom/sublime-text/2.0.2/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl', dest: "/usr/bin/subl" }
