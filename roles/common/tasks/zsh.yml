@@ -20,3 +20,6 @@
 - name: Install oh-my-zsh
   shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
   when: oh_my_zsh_installed.stat.exists == false
+
+- name: Add ll alias
+  lineinfile: dest={{ home_dir }}/.zshrc regexp="^alias ll" line="alias ll='ls -lah'"  

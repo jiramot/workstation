@@ -1,7 +1,4 @@
 ---
-- name: Add ll alias
-  lineinfile: dest={{ home_dir }}/.zshrc regexp="^alias ll" line="alias ll='ls -lah'"
-
 - name: Check Homebrew is installed
   stat: path=/usr/local/bin/brew
   register: brew_installed
