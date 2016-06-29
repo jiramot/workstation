@@ -16,30 +16,18 @@ mac_apps:
 
 brew_packages:
   - autojump
-  - awscli
   - brew-cask
   - curl
-  - consul-template
   - git
   - git-extras
-  - gradle
-  - graphviz
   - htop
-  - jq
-  - rbenv
-  - rbenv-gem-rehash
-  - rcm
+  - mysql
+  - mongodb
   - redis
-  - rename
-  - rpm
   - rsync
-  - ruby-build
-  - sloccount
   - ssh-copy-id
-  - tig
   - tree
   - wget
-  - xctool
   - zsh
 
 npm_packages:
