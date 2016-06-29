@@ -1,10 +1,10 @@
 ---
 mac_apps:
+  - atom
+  - evernote
   - flux
   - gas-mask
-  - genymotion
   - google-chrome
-  - intellij-idea
   - iterm2
   - mysqlworkbench
   - smcfancontrol
@@ -12,6 +12,7 @@ mac_apps:
   - sublime-text
   - vagrant
   - virtualbox
+  - webstorm
 
 brew_packages:
   - autojump
