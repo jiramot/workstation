@@ -4,6 +4,6 @@
   shell: /usr/bin/easy_install pip
          creates=/usr/local/bin/pip
 
-- name: Install 'pip' packages
-  pip: name={{ item }} state=present
-  with_items: pip_packages   
+# - name: Install 'pip' packages
+#   pip: name={{ item }} state=present
+#   with_items: pip_packages

@@ -30,25 +30,4 @@ brew_packages:
   - wget
   - zsh
 
-npm_packages:
-  - appium
-
-gem_packages:
-  - bundler
-  - cocoapods
-  - fpm
-  - json
-  - rake
-
-pip_packages:
-  - battleschool
-  - awsebcli
-
-link_files:
-  - { path: '/opt/homebrew-cask/Caskroom/sublime-text/2.0.2/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl', dest: "/usr/bin/subl" }
-  - { path: '/usr/local/lib/node_modules/appium/bin/appium.js', dest: '/usr/bin/appium'}
-
 environment_variables:
-  - export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home
-  - export GRADLE_HOME=/usr/local/Cellar/gradle/2.6/libexec
-  - export GOROOT=/usr/local/Cellar/go/1.5/libexec

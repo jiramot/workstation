@@ -5,7 +5,7 @@
 
 - name: Install Homebrew
   shell: ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-  when: brew_installed.stat.exists == false  
+  when: brew_installed.stat.exists == false
 
 - name: Remove outdated homebrew taps
   homebrew_tap: tap={{ item }} state=absent
@@ -40,10 +40,6 @@
 - name: Cleanup 'homebrew'
   command: brew prune && brew cleanup && brew tap --repair
 
-- name: Install 'npm' packages
-  npm: name={{ item }} global=yes state=present
-  with_items: npm_packages
-
 - name: Install 'janus' for 'vim'
   shell: curl -Lo- https://bit.ly/janus-bootstrap | bash
          creates={{ lookup('env','HOME') }}/.vim/janus
@@ -62,22 +58,13 @@
 
 - include: zsh.yml
 - include: vim.yml
-- include: ruby.yml
 - include: python.yml
 
-- name: Create link file
-  file: src={{ item.path }} dest={{ item.dest }} state=link
-  with_items: link_files
-  sudo: yes
+# - name: Ensure presence of launchd.conf
+#   file: state=touch path=/etc/launchd.conf
+#   sudo: yes
 
-- name: Ensure presence of launchd.conf
-  file: state=touch path=/etc/launchd.conf
-  sudo: yes
-
-- name: Add environment variable
-  lineinfile: dest=/etc/launchd.conf regexp="^{{ item }}" line="{{ item }}"  
-  with_items: environment_variables
-  sudo: yes
-
-- name: Setup Pod
-  command: pod setup
+# - name: Add environment variable
+#   lineinfile: dest=/etc/launchd.conf regexp="^{{ item }}" line="{{ item }}"
+#   with_items: environment_variables
+#   sudo: yes
