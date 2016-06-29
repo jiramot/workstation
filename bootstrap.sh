@@ -3,10 +3,11 @@ et -e
 SOURCE_DIR=`dirname "${BASH_SOURCE[0]}"`
 
 # Smoketest environment
-if [[ `which python` ]]; then
-  echo "OK Found python!"
+if [[ `which brew` ]]; then
+  echo "OK Found brew!"
 else
-  echo "Please install python first."
+  echo "Please install brew first."
+  echo '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
 fi
 
 # Installing most important package
@@ -25,4 +26,4 @@ fi
 
 # Run ansible
 echo "INFO Execute ansible playbook"
-ansible-playbook -i ${SOURCE_DIR}/hosts.ini -K ${SOURCE_DIR}/playbook.yml $* 
+ansible-playbook -i ${SOURCE_DIR}/hosts.ini -K ${SOURCE_DIR}/playbook.yml $*
