@@ -2,4 +2,4 @@
 - name: Install nodejs packages
   homebrew: pkg={{ item }} state=present
   with_items:
-    - nodejs
+    - node
