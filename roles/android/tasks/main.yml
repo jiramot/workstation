@@ -2,5 +2,7 @@
 - name: Install 'android-studio' with brew-cask
   homebrew_cask: name={{ item }} state=installed
   ignore_errors: yes
-  with_items: 
+  with_items:
     - android-studio
+  tags:
+    - android
