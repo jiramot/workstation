@@ -10,6 +10,7 @@ mac_apps:
   - smcfancontrol
   - sourcetree
   - sublime-text
+  - tunnelblick
   - vagrant
   - virtualbox
   - webstorm
