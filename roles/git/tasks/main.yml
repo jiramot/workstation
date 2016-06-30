@@ -1,0 +1,14 @@
+---
+- name: Install git
+  homebrew: pkg={{ item }} state=present
+  with_items:
+    - git
+    - git-extras
+  tags:
+    - git
+
+- name: Create tree alias
+  command: "git config --global alias.tree 'log --pretty=oneline'"
+  tags:
+    - git
+    - git-alias

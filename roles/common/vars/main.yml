@@ -19,8 +19,6 @@ brew_packages:
   - autojump
   - brew-cask
   - curl
-  - git
-  - git-extras
   - htop
   - mysql
   - mongodb
