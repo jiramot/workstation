@@ -4,6 +4,7 @@
   with_items:
     - docker
     - docker-machine
+    - docker-compose
   tags:
     - docker
 
