@@ -5,6 +5,7 @@ mac_apps:
   - flux
   - gas-mask
   - google-chrome
+  - intellij-idea
   - iterm2
   - mysqlworkbench
   - smcfancontrol
