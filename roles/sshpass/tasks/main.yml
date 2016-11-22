@@ -1,0 +1,20 @@
+---
+- name: Download sshpass
+  get_url: url=http://downloads.sourceforge.net/project/sshpass/sshpass/1.05/sshpass-1.05.tar.gz
+            dest=/tmp/sshpass-1.05.tar.gz mode=0440
+  tags:
+    - sshpass
+
+- name: Make sure have /tmp/sshpass-1.05
+  file: path=/tmp/sshpass-1.05 state=directory mode=0755
+  tags:
+    - sshpass
+
+- name: Extract sshpass
+  unarchive: src=/tmp/sshpass-1.05.tar.gz dest=/tmp
+  tags:
+    - sshpass
+
+- name: Install
+  make: chdir=/tmp/sshpass-1.05 target=install
+  become: yes
