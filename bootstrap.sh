@@ -1,4 +1,4 @@
-et -e
+set -e
 
 SOURCE_DIR=`dirname "${BASH_SOURCE[0]}"`
 
