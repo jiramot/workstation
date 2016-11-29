@@ -1,5 +1,0 @@
----
-- name: Install 'regis' packages
-  homebrew: pkg={{ item }} state=present
-  with_items: 
-    - redis
