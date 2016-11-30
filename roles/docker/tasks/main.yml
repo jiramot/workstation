@@ -1,15 +1,12 @@
 ---
+- name: Install docker
+  homebrew_cask: name={{ item }} state=installed
+  with_items:
+    - docker
+
 - name: Install docker packages
   homebrew: pkg={{ item }} state=present
   with_items:
-    - docker
-    - docker-machine
     - docker-compose
-  tags:
-    - docker
-
-- name: Create docker-machine
-  command: docker-machine create --driver virtualbox --virtualbox-memory 8192 --virtualbox-disk-size 40000 default
-  ignore_errors: yes
   tags:
     - docker
