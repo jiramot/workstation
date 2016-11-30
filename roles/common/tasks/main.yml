@@ -72,12 +72,3 @@
 - include: zsh.yml
 # - include: vim.yml
 - include: python.yml
-
-# - name: Ensure presence of launchd.conf
-#   file: state=touch path=/etc/launchd.conf
-#   sudo: yes
-
-# - name: Add environment variable
-#   lineinfile: dest=/etc/launchd.conf regexp="^{{ item }}" line="{{ item }}"
-#   with_items: environment_variables
-#   sudo: yes
