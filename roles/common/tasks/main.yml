@@ -70,7 +70,7 @@
     - { name: 'rizzatti', repo: 'dash.vim' }
 
 - include: zsh.yml
-- include: vim.yml
+# - include: vim.yml
 - include: python.yml
 
 # - name: Ensure presence of launchd.conf

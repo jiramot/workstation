@@ -1,12 +1,15 @@
 ---
-- name: Vim | Install janus
-  git: repo=https://github.com/carlhuda/janus.git dest={{ home_dir }}/.vim force=yes
+- name: Install macvim
+  homebrew: pkg=macvim state=present
+  tags: vim
 
-- name: Vim | Install janus sub modules
-  command: rake creates={{ home_dir }}/.janus chdir={{ home_dir }}/.vim
+- name: Vim | Install janus
+  command: curl -L https://bit.ly/janus-bootstrap | bash
+  tags: vim
 
 - name: Create folder for janus plugins
   file: path={{ home_dir }}/.janus owner={{ username }} mode=0755 state=directory
+  tags: vim
 
 - name: Pull in vim plugins
   git: repo=git://github.com/{{ item.name }}/{{ item.repo }}.git
@@ -18,3 +21,4 @@
     - { name: 'Lokaltog', repo: 'vim-powerline' }
     - { name: 'rizzatti', repo: 'funcoo.vim' }
     - { name: 'rizzatti', repo: 'dash.vim' }
+  tags: vim
