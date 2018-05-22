@@ -3,8 +3,12 @@
   homebrew: pkg=macvim state=present
   tags: vim
 
+- name: Vim | Downloan janus
+  get_url: url=https://raw.githubusercontent.com/carlhuda/janus/master/bootstrap.sh dest=/tmp/janus_bootstrap.sh
+  tags: vim
+
 - name: Vim | Install janus
-  command: curl -L https://bit.ly/janus-bootstrap | bash
+  shell: /tmp/janus_bootstrap.sh
   tags: vim
 
 - name: Create folder for janus plugins

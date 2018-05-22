@@ -17,9 +17,7 @@
   with_items:
     - caskroom/cask
     - caskroom/versions
-    - homebrew/binary
-    - homebrew/dupes
-    - homebrew/versions
+    - homebrew/core
     - thoughtbot/formulae
 
 - name: Install 'homebrew' packages
@@ -35,14 +33,8 @@
   ignore_errors: yes
   with_items:
     - atom
-    - evernote
-    - flux
-    - gas-mask
-    - iterm2
-    - mysqlworkbench
-    - smcfancontrol
     - sourcetree
-    - tunnelblick
+    - slack
 
 - name: Uninstall 'apps' with brew-cask
   homebrew_cask: name={{ item }} state=absent
@@ -70,5 +62,5 @@
     - { name: 'rizzatti', repo: 'dash.vim' }
 
 - include: zsh.yml
-# - include: vim.yml
+- include: vim.yml
 - include: python.yml

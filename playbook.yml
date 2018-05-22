@@ -8,7 +8,6 @@
     - role: common
     - role: docker
     - role: git
-    - role: java
     - role: nodejs
 
   post_tasks:
