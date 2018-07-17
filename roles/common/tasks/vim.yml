@@ -7,6 +7,10 @@
   get_url: url=https://raw.githubusercontent.com/carlhuda/janus/master/bootstrap.sh dest=/tmp/janus_bootstrap.sh
   tags: vim
 
+- name: Add execute permisstion to file
+  file: path=/tmp/janus_bootstrap.sh mode=0755
+  tags: vim
+  
 - name: Vim | Install janus
   shell: /tmp/janus_bootstrap.sh
   tags: vim
