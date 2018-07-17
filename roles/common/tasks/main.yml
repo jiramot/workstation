@@ -15,8 +15,6 @@
 - name: Install homebrew taps (needed to install 'apps' with homebrew)
   homebrew_tap: tap={{ item }} state=present
   with_items:
-    - caskroom/cask
-    - caskroom/versions
     - homebrew/core
     - thoughtbot/formulae
 
@@ -33,6 +31,7 @@
   ignore_errors: yes
   with_items:
     - atom
+    - iterm2
     - sourcetree
     - slack
 
