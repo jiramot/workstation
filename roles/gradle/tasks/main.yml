@@ -1,0 +1,20 @@
+---
+- name: Install sdk
+  shell: >
+    curl -s "https://get.sdkman.io" | bash
+  tags:
+    - sdk
+    - gradle
+
+- name: Source
+  shell: >
+    /bin/bash -c "source ~/.sdkman/bin/sdkman-init.sh"
+  tags:
+    - gradle
+
+
+- name: Install gradle
+  shell: sdk install gradle
+  ignore_errors: yes
+  tags:
+    - gradle
