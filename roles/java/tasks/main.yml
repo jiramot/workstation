@@ -4,5 +4,5 @@
            url=http://download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-macosx-x64.dmg
            curl_opts="-L --cookie oraclelicense=accept-securebackup-cookie"
            archive_type=dmg archive_path='JDK 8 Update 111.pkg'
-  sudo: yes
+  become: yes
   tags: java

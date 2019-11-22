@@ -13,4 +13,4 @@
 - name: Install gems
   gem: name={{ item }} 
   with_items: gem_packages
-  sudo: yes
+  become: yes

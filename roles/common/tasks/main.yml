@@ -19,12 +19,9 @@
     - thoughtbot/formulae
 
 - name: Install 'homebrew' packages
-  homebrew: pkg={{ item }} state=present
-  with_items:
-    - htop
-    - tree
-    - wget
-    - zsh
+  homebrew:
+    pkg: ['htop', 'tree', 'wget', 'zsh']
+    state: present
 
 - name: Install 'apps' with brew-cask
   homebrew_cask: name={{ item }} state=installed
@@ -40,9 +37,6 @@
   ignore_errors: yes
   with_items:
     - cocoapods
-
-- name: Cleanup 'homebrew'
-  command: brew prune && brew cleanup && brew tap --repair
 
 - name: Install 'janus' for 'vim'
   shell: curl -Lo- https://bit.ly/janus-bootstrap | bash

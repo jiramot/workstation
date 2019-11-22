@@ -1,6 +1,6 @@
 ---
 - name: Install python package manager 'pip'
-  sudo: yes
+  become: yes
   shell: /usr/bin/easy_install pip
          creates=/usr/local/bin/pip
 

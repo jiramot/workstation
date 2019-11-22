@@ -4,12 +4,12 @@
   register: current_shell
 
 - name: Enable zsh in /etc/shells
-  sudo: true
+  become: true
   shell: /bin/sh -c 'grep -q "{{ zsh_path }}" /etc/shells || echo "{{ zsh_path }}" >> /etc/shells'
   when: current_shell.stdout.find('zsh') == false
 
 - name: Set zsh as default shell
-  sudo: true
+  become: true
   shell: chsh -s {{ zsh_path }}
   when: current_shell.stdout.find('zsh') == false
 
@@ -22,4 +22,4 @@
   when: oh_my_zsh_installed.stat.exists == false
 
 - name: Add ll alias
-  lineinfile: dest={{ home_dir }}/.zshrc regexp="^alias ll" line="alias ll='ls -lah'"  
+  lineinfile: dest={{ home_dir }}/.zshrc regexp="^alias ll" line="alias ll='ls -lah'"
