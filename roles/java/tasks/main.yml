@@ -1,8 +1,13 @@
 ---
-- name: Install java 8u111
-  mac_pkg: pkg_name=com.oracle.jdk8u111 pkg_version=1.1
-           url=http://download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-macosx-x64.dmg
-           curl_opts="-L --cookie oraclelicense=accept-securebackup-cookie"
-           archive_type=dmg archive_path='JDK 8 Update 111.pkg'
-  become: yes
-  tags: java
+- name: Install brew tap openjdk
+  homebrew_tap:
+    name: AdoptOpenJDK/openjdk
+  tags:
+    - java
+
+- name: Install openjdk
+  homebrew_cask:
+    name: adoptopenjdk8
+    state: present
+  tags:
+    - java
