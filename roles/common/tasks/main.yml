@@ -27,10 +27,8 @@
   homebrew_cask: name={{ item }} state=installed
   ignore_errors: yes
   with_items:
-    - atom
     - iterm2
-    - sourcetree
-    - slack
+    - visual-studio-code
 
 - name: Uninstall 'apps' with brew-cask
   homebrew_cask: name={{ item }} state=absent
