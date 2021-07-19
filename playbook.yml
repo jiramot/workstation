@@ -8,7 +8,7 @@
     - role: common
     - role: docker
     - role: git
-    # - role: nodejs
+    - role: nodejs
     # - role: vagrant
     # - role: gradle
 

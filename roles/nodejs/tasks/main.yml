@@ -1,6 +1,6 @@
 ---
 - name: NVM | Downloan nvm
-  get_url: url=https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh dest=/tmp/nvm_install.sh
+  get_url: url=https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh dest=/tmp/nvm_install.sh
   tags:
     - nvm
 
@@ -14,15 +14,9 @@
   tags:
     - nvm
 
-- name: Source nvm in ~/.zshrc
+- name: Install Node
   shell: >
-    /bin/bash -c "source ~/.nvm/nvm.sh && nvm install 0.10 && nvm alias default 0.10"
+    /bin/bash -c "source ~/.nvm/nvm.sh && nvm install --lts --default"
     creates=/home/{{ ansible_user_id }}/.nvm/alias
   tags:
     - nvm
-
-- name: Install nodejs
-  shell: nvm install node
-  tags:
-    - nvm 
-    - node
