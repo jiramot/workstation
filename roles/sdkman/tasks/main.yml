@@ -3,18 +3,14 @@
   shell: >
     curl -s "https://get.sdkman.io" | bash
   tags:
-    - sdk
+    - java 
     - gradle
 
-- name: Source
+- name: Install java
   shell: >
     /bin/bash -c "source ~/.sdkman/bin/sdkman-init.sh"
+    sdk install java 11.0.11.j9-adpt
+    sdk install gradle
   tags:
-    - gradle
-
-
-- name: Install gradle
-  shell: sdk install gradle
-  ignore_errors: yes
-  tags:
+    - java 
     - gradle
