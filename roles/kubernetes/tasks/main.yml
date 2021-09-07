@@ -1,0 +1,14 @@
+- name: Install minikube
+  homebrew: pkg=minikube state=present
+  tags:
+    - kubernetes
+
+- name: Install kubectl
+  homebrew: pkg=kubectl state=present
+  tags:
+    - kubernetes
+
+- name: Install k9s
+  homebrew: pkg=k9s state=present
+  tags:
+    - kubernetes        

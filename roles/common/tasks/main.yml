@@ -54,4 +54,4 @@
 
 - include: zsh.yml
 - include: vim.yml
-- include: python.yml
+# - include: python.yml
